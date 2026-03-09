@@ -1,161 +1,218 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AniKai</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f1115;
-      color: white;
-    }
+<title>AniKai</title>
 
-    /* HEADER */
-    .header {
-      background: #151821;
-      padding: 15px 25px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+<style>
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #ff4d6d;
-    }
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#16001f,#2a0038);
+color:white;
+}
 
-    .search {
-      flex: 1;
-    }
+/* ÜST BAR */
 
-    .search input {
-      width: 100%;
-      padding: 10px;
-      background: #1c1f2b;
-      border: none;
-      border-radius: 8px;
-      color: white;
-    }
+.topbar{
+position:fixed;
+top:0;
+width:100%;
+background:#140020;
+padding:12px;
+text-align:center;
+box-shadow:0 0 15px #ff33cc;
+z-index:999;
+}
 
-    /* MAIN */
-    .container {
-      display: flex;
-      padding: 20px;
-      gap: 20px;
-    }
+.topbar a{
+color:#ff99dd;
+text-decoration:none;
+font-size:14px;
+}
 
-    /* SIDEBAR */
-    .sidebar {
-      width: 250px;
-      background: #151821;
-      padding: 20px;
-      border-radius: 10px;
-    }
+/* HERO */
 
-    .sidebar h3 {
-      margin-top: 0;
-    }
+.hero{
+padding-top:120px;
+text-align:center;
+padding-bottom:120px;
+}
 
-    .sidebar label {
-      display: block;
-      margin: 8px 0;
-      font-size: 14px;
-    }
+.logo{
+width:140px;
+filter:drop-shadow(0 0 20px #ff33cc);
+}
 
-    /* ANIME GRID */
-    .content {
-      flex: 1;
-    }
+.hero h1{
+font-size:60px;
+color:#ff66cc;
+text-shadow:0 0 25px #ff33cc;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 20px;
-    }
+.hero p{
+color:#ddd;
+font-size:20px;
+}
 
-    .card {
-      background: #151821;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: 0.2s;
-      cursor: pointer;
-    }
+.download{
+margin-top:30px;
+padding:15px 40px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ff33cc,#9933ff);
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+.download:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #ff33cc;
+}
 
-    .card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
+/* SEARCH */
 
-    .card-title {
-      padding: 10px;
-      font-size: 14px;
-    }
-  </style>
+.searchbar{
+width:80%;
+margin:auto;
+margin-bottom:40px;
+}
+
+.searchbar input{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:none;
+background:#111;
+color:white;
+}
+
+/* LAYOUT */
+
+.main{
+display:flex;
+padding:30px;
+gap:30px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:200px;
+background:#0c0c16;
+padding:20px;
+border-radius:10px;
+}
+
+.sidebar h3{
+margin-top:0;
+}
+
+.sidebar label{
+display:block;
+margin:8px 0;
+}
+
+/* ANIME GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+gap:20px;
+flex:1;
+}
+
+.card{
+background:#0c0c16;
+padding:10px;
+border-radius:10px;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px #ff33cc;
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+}
+
+.card p{
+margin:8px 0 0;
+font-size:14px;
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="logo">AniKai</div>
+<div class="topbar">
+<a href="#">🌸 AniKai Instagram hesabımızı takip et</a>
+</div>
 
-    <div class="search">
-      <input type="text" placeholder="Bir anime arayın..." />
-    </div>
-  </div>
+<div class="hero">
 
-  <!-- MAIN -->
-  <div class="container">
+<img src="https://i.imgur.com/9Xn4V6H.png" class="logo">
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-      <h3>Türler</h3>
-      <label><input type="checkbox"> Aksiyon</label>
-      <label><input type="checkbox"> Dram</label>
-      <label><input type="checkbox"> Komedi</label>
-      <label><input type="checkbox"> Isekai</label>
-      <label><input type="checkbox"> Bilim Kurgu</label>
-    </div>
+<h1>AniKai</h1>
+<p>AniKai v1.0</p>
+<p>Anime Dünyasına Açılan Kapı 🌸</p>
 
-    <!-- CONTENT -->
-    <div class="content">
-      <h2>Keşfet</h2>
+<button class="download">En Son Sürümü İndir DATTEBAYO!!!</button>
 
-      <div class="grid">
+</div>
 
-        <div class="card">
-          <img src="https://via.placeholder.com/300x400">
-          <div class="card-title">Solo Leveling</div>
-        </div>
+<div class="searchbar">
+<input placeholder="Bir anime arayın...">
+</div>
 
-        <div class="card">
-          <img src="https://via.placeholder.com/300x400">
-          <div class="card-title">Spy x Family</div>
-        </div>
+<div class="main">
 
-        <div class="card">
-          <img src="https://via.placeholder.com/300x400">
-          <div class="card-title">Mushoku Tensei</div>
-        </div>
+<div class="sidebar">
 
-        <div class="card">
-          <img src="https://via.placeholder.com/300x400">
-          <div class="card-title">Baki</div>
-        </div>
+<h3>Türler</h3>
 
-      </div>
-    </div>
+<label><input type="checkbox"> Aksiyon</label>
+<label><input type="checkbox"> Dram</label>
+<label><input type="checkbox"> Komedi</label>
+<label><input type="checkbox"> Isekai</label>
+<label><input type="checkbox"> Bilim Kurgu</label>
 
-  </div>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg">
+<p>Solo Leveling</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.myanimelist.net/images/anime/1441/122795.jpg">
+<p>Spy x Family</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.myanimelist.net/images/anime/1422/128039.jpg">
+<p>Mushoku Tensei</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg">
+<p>Baki</p>
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
